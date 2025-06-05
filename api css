@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: powderblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background-image: url("Foto/WebsiteAchtergrond.png");
+    background-size: cover;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+ul, li {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+.container, .Buttonpdf {
+    display: flex;
+    gap: 75px;
+}
+
+button {
+    padding: 5%;
+    font-size: 13px;
+    border: none;
+    background-color: #4073aa;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 130%;
+    height: 140%;
+    transition: width 400ms, height 400ms;
+}
+
+button:hover {
+    background-color: #959ea7;
+    width: 135%;
+    height: 145%;
+}
+
+.Formulier, .Grafiek, .Factuur, .Logout {
+    font-size: 16px;
+    background-color: #4073aa;
+    color: white;
+    cursor: pointer;
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    transition: width 400ms, height 400ms;
+}
+
+.Formulier { top: 10%; left: 1%; }
+.Grafiek { top: 10%; right: 3%; }
+.Factuur { top: 25%; left: 1%; }
+.Logout  { top: 25%; right: 3%; }
+
+.Formulier:hover,
+.Grafiek:hover,
+.Factuur:hover,
+.Logout:hover {
+    background-color: #959ea7;
+    width: 9%;
+    height: 9%;
+}
+
+.schuine-balk {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+}
+
+.links {
+    left: 5%;
+    transform: skewX(-130deg);
+    transform-origin: bottom left;
+    background-color: rgba(255, 0, 123, 0.7);
+}
+
+.rechts {
+    right: 5%;
+    transform: skewX(130deg);
+    transform-origin: bottom right;
+    background-color: rgba(3, 0, 96, 0.7);
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: transparent;
+    color: white;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+.feestdagen {
+    margin: 40px auto 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #111111;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.feestdagen h3 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+.feestdagen ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.feestdagen li {
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-size: cover;
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 1%;
+        margin-top: -80px;
+    }
+
+    .Formulier,
+    .Grafiek,
+    .Factuur,
+    .Logout {
+        position: static;
+        width: 70%;
+        height: auto;
+        margin-top: 26px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .feestdagen {
+        width: 95%;
+        margin: 30px auto 10px auto;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .schuine-balk {
+        display: none;
+    }
+}
